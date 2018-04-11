@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<properties resource="db-config.properties" />
+	
+	<typeAliases>
+		<package name="com.dianbo.model" />
+	</typeAliases>
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="mapper/CustomerMapper.xml" />
+		<mapper resource="mapper/EmployeeMapper.xml" />
+		<mapper resource="mapper/GoodsBackMapper.xml" />
+		<mapper resource="mapper/GoodsBackDetailMapper.xml" />
+		<mapper resource="mapper/InStockMapper.xml" />
+		<mapper resource="mapper/InStockDetailMapper.xml" />
+		<mapper resource="mapper/LogMapper.xml" />
+		<mapper resource="mapper/OrderMapper.xml" />
+		<mapper resource="mapper/OrderDetailMapper.xml" />
+		<mapper resource="mapper/OutStockMapper.xml" />
+		<mapper resource="mapper/OutStockDetailMapper.xml" />
+		<mapper resource="mapper/ProductMapper.xml" />
+		<mapper resource="mapper/ProductTypeMapper.xml" />
+		<mapper resource="mapper/PurchaseRecordMapper.xml" />
+		<mapper resource="mapper/SellMapper.xml" />
+		<mapper resource="mapper/SellDetailMapper.xml" />
+		<mapper resource="mapper/ShopMapper.xml" />
+		<mapper resource="mapper/StockMapper.xml" />
+		<mapper resource="mapper/UserMapper.xml" />
+	</mappers>
+</configuration>
